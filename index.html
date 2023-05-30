@@ -7,7 +7,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- Script -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <title>Form Rekrutasi</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <h1>Form Rekrutasi</h1>
     </header>
     
-    <form class="form-container">
+    <form id="myForm" class="form-container">
         <div class="form-item nama">
             <label for="nama">Nama Lengkap<sup>*</sup></label>
             <input type="text" id="nama" name="nama" placeholder="Nama Lengkap">
@@ -51,9 +51,33 @@
             </select>
         </div>
 
-        <button class="submit">
-            <a href="script.js">Submit</a>
-        </button>
+        <input type="submit" value="Submit">
     </form>
+
+    <div id="summary"></div>
 </body>
+
+<script>
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var nama = document.getElementById('nama').value;
+        var email = document.getElementById('email').value;
+        var phone_number = document.getElementById('phone-number').value;
+        var lowongan = document.getElementById('lowongan').value;
+        var lokasi = document.getElementById('lokasi').value;
+
+        var summary = document.getElementById('summary');
+        summary.innerHTML = '<h2>Summary</h2>';
+        summary.innerHTML += '<p>Nama Lengkap: ' + nama + '</p>';
+        summary.innerHTML += '<p>Email: ' + email + '</p>';
+        summary.innerHTML += '<p>Nomor Telepon: ' + phone_number + '</p>';
+        summary.innerHTML += '<p>Lowongan: ' + lowongan + '</p>';
+        summary.innerHTML += '<p>Lokasi: ' + lokasi + '</p>';
+
+        console.log(summary)
+
+        document.getElementById('summary').appendChild(summary);
+    })
+</script>
+
 </html>
