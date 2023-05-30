@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Script -->
+    <script src="script.js"></script>
+    <title>Form Rekrutasi</title>
+</head>
+<body>
+    <header class="header"> 
+        <h1>Form Rekrutasi</h1>
+    </header>
+    
+    <form class="form-container">
+        <div class="form-item nama">
+            <label for="nama">Nama Lengkap<sup>*</sup></label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Lengkap">
+        </div>
+
+        <div class="form-item email">
+            <label for="email">Email<sup>*</sup></label>
+            <input type="text" id="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="form-item phone-number">
+            <label for="phone-number">Nomor Telepon<sup>*</sup></label>
+            <input type="text" id="phone-number" name="phone-number" placeholder="Nomor Telepon">
+        </div>
+
+        <div class="form-item lowongan">
+            <label for="lowongan">Lowongan<sup>*</sup></label>
+            <select id="lowongan" name="lowongan">
+                <option value="web">Web Developer</option>
+                <option value="android">Android Developer</option>
+                <option value="ios">IOS Developer</option>
+                <option value="qa">Quality Assurance</option>
+            </select>
+        </div>
+
+        <div class="form-item lokasi">
+            <label for="lokasi">Lokasi<sup>*</sup></label>
+            <select id="lokasi" name="lokasi">
+                <option value="bandung">Bandung</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="yogyakarta">Yogyakarta</option>
+                <option value="surabaya">Surabaya</option>
+            </select>
+        </div>
+
+        <button class="submit">
+            <a href="script.js">Submit</a>
+        </button>
+    </form>
+</body>
+</html>
